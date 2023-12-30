@@ -1,20 +1,21 @@
-import { GeistSans } from 'geist/font/sans'
-import './globals.css'
+import { GeistSans } from "geist/font/sans";
+import "./globals.css";
+
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : 'http://localhost:3000'
+  : "http://localhost:3000";
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: 'Ancients of Resonite Gate Network',
-  description: 'All active (public) stargate\'s inside of Resonite.',
-}
+  title: "Ancients of Resonite Gate Network",
+  description: "All active (public) stargate's inside of Resonite.",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className={GeistSans.className}>
@@ -24,5 +25,5 @@ export default function RootLayout({
         </main>
       </body>
     </html>
-  )
+  );
 }
